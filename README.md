@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# Тестовое задание для Junior React Developer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Задание
 
-Currently, two official plugins are available:
+Необходимо развернуть локально `json-server` и загрузить в него данные **seminars**. Используйте любые удобные технологии, но обязательно с использованием React для реализации следующих функций:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Запрос данных**
 
-## Expanding the ESLint configuration
+   - Запросите данные с семинарами из `json-server`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Отрисовка списка семинаров**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   - Отобразите список семинаров на странице.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Удаление семинара**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   - Реализуйте кнопку удаления семинара, которая при клике открывает окно подтверждения.
+   - При подтверждении удаления отправьте `DELETE` запрос на сервер.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+4. **Редактирование семинара**
+
+   - Реализуйте кнопку редактирования семинара.
+   - Редактирование должно происходить в модальном окне.
+
+5. **Размещение на GitHub**
+   - Залейте проект на GitHub и пришлите ссылку.
+   - **Важно:** `json-server` должен находиться в том же репозитории, что и приложение.
+
+## Дополнительные рекомендации
+
+- Используйте современные подходы (например, React Hooks, функциональные компоненты).
+- Обратите внимание на обработку ошибок и состояния загрузки.
+- Добавьте комментарии в код для пояснения ключевых моментов реализации.
+
+
+
+## Используемые технологии и библиотеки
+
+- [React](https://reactjs.org/) — библиотека для построения пользовательских интерфейсов.
+- [TypeScript](https://www.typescriptlang.org/) — для типизации кода.
+- [Axios](https://axios-http.com/) — для выполнения HTTP-запросов (например, для получения данных о погоде).
+- [React Query](https://tanstack.com/query/v4) — для управления состоянием данных и кэширования.
+- [SCSS](https://sass-lang.com/) — для стилизации компонентов.
+- [json-server](https://github.com/typicode/json-server) — для создания mock-сервера и хранения данных о задачах.
+- [Vite](https://vitejs.dev/) — инструмент для сборки и разработки проекта.
+
+
+## Как запустить проект
+
+1. Склонируйте репозиторий:
+  
+   git clone https://github.com/Bullbazawr/technicalTask.git
+   
+2. Перейдите в папку проекта:
+  
+   cd test-task
+   
+3. Установите зависимости:
+  
+   npm install
+   
+4. Запустите json-server для mock-данных:
+  
+   npx json-server --watch seminars.json --port 3000
+   
+5. Запустите проект с помощью Vite:
+  
+   npm run dev
+   
+6. Откройте браузер и перейдите по адресу http://localhost:5173.
+
