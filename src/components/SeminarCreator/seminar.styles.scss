@@ -1,0 +1,28 @@
+.seminarCreatorContainer {
+    width: 300px;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.seminarCreatorTitle {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.seminarTitleInput {
+    font-size: 2rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.seter {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .input {
+        font-size: 2rem;
+        width: 50%;
+    }
+}

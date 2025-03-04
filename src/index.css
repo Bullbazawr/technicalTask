@@ -1,0 +1,5 @@
+@import './components/SeminarsList/seminarList.styles.scss';
+@import './assets/_nullstyle.scss';
+@import './components/HomePage/homePage.styles.scss';
+@import './components/SeminarCreator/seminar.styles.scss';
+@import './components/EditSeminarForm/editSeminarForm.styles.scss'

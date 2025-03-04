@@ -1,0 +1,45 @@
+.seminarsListContainer {
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seminarsListItemLeftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+
+.seminarList {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.seminarsListItem {
+    width: 40rem;
+    border: 1px solid rgb(5, 5, 5);
+    display: flex;
+    justify-content: space-between;
+}
+
+.seminarButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seminarImg {
+    height: 300px;
+}
+
+.seminarsListFooter {
+    width: 100%;
+    padding: 1rem 12rem;
+    display: flex;
+    justify-content: space-between;
+
+}
